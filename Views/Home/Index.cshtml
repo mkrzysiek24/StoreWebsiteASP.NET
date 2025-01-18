@@ -1,8 +1,51 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="slider-container">
+    <div class="image-slider">
+        <img src="~/images/image-1.png" alt="Image 1">
+        <img src="~/images/image-2.png" alt="Image 2">
+        <img src="~/images/image-3.png" alt="Image 3">
+        <img src="~/images/image-4.png" alt="Image 4">
+    </div>
+
+    <div class="dot-container">
+        <div class="dot"></div>
+    </div>
 </div>
+
+    <script>
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.image-slider img');
+        const dotContainer = document.querySelector('.dot-container');
+
+        function showImage(index) {
+            const translateValue = -index * 100 + '%';
+            document.querySelector('.image-slider').style.transform = 'translateX(' + translateValue + ')';
+
+            const dots = document.querySelectorAll('.dot');
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage(currentIndex);
+        }
+
+        setInterval(nextImage, 10000);
+        showImage(currentIndex);
+
+        for (let i = 0; i < images.length - 1; i++) {
+            const dot = document.createElement('div');
+            dot.classList.add('dot');
+            dotContainer.appendChild(dot);
+
+            dot.addEventListener('click', () => {
+                currentIndex = i;
+                showImage(currentIndex);
+            });
+        }
+    </script>

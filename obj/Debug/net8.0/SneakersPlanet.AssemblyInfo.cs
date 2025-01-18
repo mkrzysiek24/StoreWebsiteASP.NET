@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SneakersPlanet")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+253d9e3eca348c6e2e35e02dd4427fbe1f8ab3ab")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0f91f32ebf2a487a8d9ff5c9e1c7acbaedfee55f")]
 [assembly: System.Reflection.AssemblyProductAttribute("SneakersPlanet")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SneakersPlanet")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
