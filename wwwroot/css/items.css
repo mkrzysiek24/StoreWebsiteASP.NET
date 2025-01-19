@@ -1,0 +1,114 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px;
+}
+
+nav img {
+    height: 40px;
+}
+
+nav a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px;
+    margin: 0 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    color: #50a1c7;
+}
+
+.link-no-style {
+    color: #000000;
+    text-decoration: none;
+}
+
+.link-no-style:hover {
+    color: #50a1c7;
+}
+
+.free-shipping {
+    background-color: #50a1c7;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.right-icons {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.sub-menu-bar {
+    background-color: #50a1c7;
+    text-align: left;
+    padding: 30px;
+}
+
+.sub-menu-bar p {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 45px;
+    margin-left: 40px;
+}
+
+.product-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 20px;
+}
+
+.sneaker-item {
+    margin: 10px;
+    text-align: center;
+    border: 1px solid #e1e1e1; 
+    padding: 10px; 
+    border-radius: 10px; 
+    height: 340px;
+    width: 370px;
+}
+
+.sneaker-image {
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 10px; 
+}
+
+.sneaker-info {
+    max-width: 400px;
+    margin-top: 10px;
+}
+
+.sneaker-info a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.sneaker-info a:hover {
+    color: #50a1c7;
+}
+
+.product-details a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.product-details a:hover {
+    color: #50a1c7;
+}

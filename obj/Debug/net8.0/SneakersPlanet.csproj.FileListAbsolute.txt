@@ -29,3 +29,11 @@
 /Users/mkrzysiek/Documents/UWr/ASP.NET/StoreWebsiteASP.NET/obj/Debug/net8.0/SneakersPlanet.pdb
 /Users/mkrzysiek/Documents/UWr/ASP.NET/StoreWebsiteASP.NET/obj/Debug/net8.0/SneakersPlanet.genruntimeconfig.cache
 /Users/mkrzysiek/Documents/UWr/ASP.NET/StoreWebsiteASP.NET/obj/Debug/net8.0/ref/SneakersPlanet.dll
+/Users/mkrzysiek/Documents/UWr/ASP.NET/StoreWebsiteASP.NET/bin/Debug/net8.0/DnsClient.dll
+/Users/mkrzysiek/Documents/UWr/ASP.NET/StoreWebsiteASP.NET/bin/Debug/net8.0/MongoDB.Bson.dll
+/Users/mkrzysiek/Documents/UWr/ASP.NET/StoreWebsiteASP.NET/bin/Debug/net8.0/MongoDB.Driver.dll
+/Users/mkrzysiek/Documents/UWr/ASP.NET/StoreWebsiteASP.NET/bin/Debug/net8.0/SharpCompress.dll
+/Users/mkrzysiek/Documents/UWr/ASP.NET/StoreWebsiteASP.NET/bin/Debug/net8.0/Snappier.dll
+/Users/mkrzysiek/Documents/UWr/ASP.NET/StoreWebsiteASP.NET/bin/Debug/net8.0/ZstdSharp.dll
+/Users/mkrzysiek/Documents/UWr/ASP.NET/StoreWebsiteASP.NET/obj/Debug/net8.0/SneakersPlanet.csproj.AssemblyReference.cache
+/Users/mkrzysiek/Documents/UWr/ASP.NET/StoreWebsiteASP.NET/obj/Debug/net8.0/Sneakers.61BAE188.Up2Date

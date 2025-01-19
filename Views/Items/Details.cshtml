@@ -1,0 +1,41 @@
+@model SneakersPlanet.Models.Item
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@Model.Name - Sneakers Planet</title>
+    <link rel="stylesheet" href="~/css/itemDetails.css">
+</head>
+<body>
+    <div class="dashboard">
+        <div class="content">
+            <div class="sneaker-details">
+                <img src="@Model.ImageURL" alt="@Model.Name">
+                <div class="info-container">
+                    <h1>@Model.Name</h1>
+                    <p><strong>Marka:</strong> @Model.Brand</p>
+                    <p><strong>Kategoria:</strong> @Model.Category</p>
+                    <p><strong>Cena:</strong> @Model.Price PLN</p>
+                    <p><strong>Płeć:</strong> @Model.Gender</p>
+
+                    <form action="/cart/add" method="post">
+                        <input type="hidden" name="itemId" value="@Model.Id">
+                        <input type="hidden" name="slug" value="@Model.Slug">
+
+                        <label for="sizes"><strong>Rozmiar:</strong></label>
+                        <select id="sizes" name="size" required>
+                            @foreach (var size in Model.Sizes)
+                            {
+                                <option value="@size.Size">@size.Size</option>
+                            }
+                        </select>
+                        <button type="submit" class="add-to-cart-button">Dodaj do koszyka</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

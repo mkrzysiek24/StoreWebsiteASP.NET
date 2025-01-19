@@ -9,6 +9,14 @@
       "PackagePath": "staticwebassets/css/home.css"
     },
     {
+      "Id": "/Users/mkrzysiek/Documents/UWr/ASP.NET/StoreWebsiteASP.NET/wwwroot/css/itemDetails.css",
+      "PackagePath": "staticwebassets/css/itemDetails.css"
+    },
+    {
+      "Id": "/Users/mkrzysiek/Documents/UWr/ASP.NET/StoreWebsiteASP.NET/wwwroot/css/items.css",
+      "PackagePath": "staticwebassets/css/items.css"
+    },
+    {
       "Id": "/Users/mkrzysiek/Documents/UWr/ASP.NET/StoreWebsiteASP.NET/wwwroot/favicon.ico",
       "PackagePath": "staticwebassets/favicon.ico"
     },
@@ -19,10 +27,6 @@
     {
       "Id": "/Users/mkrzysiek/Documents/UWr/ASP.NET/StoreWebsiteASP.NET/wwwroot/images/add-sneaker.svg",
       "PackagePath": "staticwebassets/images/add-sneaker.svg"
-    },
-    {
-      "Id": "/Users/mkrzysiek/Documents/UWr/ASP.NET/StoreWebsiteASP.NET/wwwroot/images/cat-animal-icon.svg",
-      "PackagePath": "staticwebassets/images/cat-animal-icon.svg"
     },
     {
       "Id": "/Users/mkrzysiek/Documents/UWr/ASP.NET/StoreWebsiteASP.NET/wwwroot/images/image-1.png",
@@ -39,6 +43,10 @@
     {
       "Id": "/Users/mkrzysiek/Documents/UWr/ASP.NET/StoreWebsiteASP.NET/wwwroot/images/image-4.png",
       "PackagePath": "staticwebassets/images/image-4.png"
+    },
+    {
+      "Id": "/Users/mkrzysiek/Documents/UWr/ASP.NET/StoreWebsiteASP.NET/wwwroot/images/planet-svgrepo-com.svg",
+      "PackagePath": "staticwebassets/images/planet-svgrepo-com.svg"
     },
     {
       "Id": "/Users/mkrzysiek/Documents/UWr/ASP.NET/StoreWebsiteASP.NET/wwwroot/images/search-icon.svg",
