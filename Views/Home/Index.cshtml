@@ -1,20 +1,27 @@
 ﻿@{
     ViewData["Title"] = "Home";
 }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sneakers Planet</title>
+    <link rel="stylesheet" href="~/css/home.css">
+</head>
+<body>
+    <div class="slider-container">
+        <div class="image-slider">
+            <img src="~/images/image-1.png" alt="Image 1">
+            <img src="~/images/image-2.png" alt="Image 2">
+            <img src="~/images/image-3.png" alt="Image 3">
+            <img src="~/images/image-4.png" alt="Image 4">
+        </div>
 
-<div class="slider-container">
-    <div class="image-slider">
-        <img src="~/images/image-1.png" alt="Image 1">
-        <img src="~/images/image-2.png" alt="Image 2">
-        <img src="~/images/image-3.png" alt="Image 3">
-        <img src="~/images/image-4.png" alt="Image 4">
+        <div class="dot-container">
+            <div class="dot"></div>
+        </div>
     </div>
-
-    <div class="dot-container">
-        <div class="dot"></div>
-    </div>
-</div>
-
     <script>
         let currentIndex = 0;
         const images = document.querySelectorAll('.image-slider img');
@@ -49,3 +56,4 @@
             });
         }
     </script>
+</body>

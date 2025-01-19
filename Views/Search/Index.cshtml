@@ -1,0 +1,38 @@
+@model IEnumerable<SneakersPlanet.Models.Item>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wyszukiwanie - Sneakers Planet</title>
+    <link rel="stylesheet" href="~/css/search.css">
+</head>
+<body>
+    <div class="dashboard">
+        <div class="content">
+            <h1>Wyszukiwarka</h1>
+            <form id="searchForm" action="/search" method="GET">
+                <div class="search-container">
+                    <input type="text" id="searchInput" name="query" placeholder="Wpisz frazę..." value="@ViewData["Query"]">
+                    <button type="submit" class="button">Szukaj</button>
+                </div>
+            </form>
+            <div class="product-details">
+                @foreach (var item in Model)
+                {
+                    <div class="sneaker-item">
+                        <a href="/Items/Details?slug=@item.Slug">
+                            <img class="sneaker-image" src="@item.ImageURL" alt="Product Image">
+                            <div class="sneaker-info">
+                                <h2 class="sneaker-name">@item.Name</h2>
+                                <p class="sneaker-price">Price: @item.Price PLN</p>
+                            </div>
+                        </a>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</body>
+</html>

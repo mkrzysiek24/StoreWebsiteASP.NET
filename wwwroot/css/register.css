@@ -1,0 +1,107 @@
+body {
+    font-family: sans-serif, Arial;
+    margin: 0;
+    padding: 0;
+    background-color: #50a1c7;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px;
+}
+
+nav img {
+    height: 40px;
+}
+
+nav a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px;
+    margin: 0 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    color: #50a1c7;
+}
+
+.free-shipping {
+    background-color: #50a1c7;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.right-icons {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.login-container {
+    background-color: #ffffff;
+    padding: 50px 50px 50px 50px;
+    margin: 50px auto;
+    margin-top: 100px;
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-container input {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #50a1c7;
+    border-radius: 10px;
+}
+
+.login-container button {
+    background-color: #50a1c7;
+    color: #ffffff;
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.login-container button:hover {
+    background-color: #2b5e75;
+    color: white;
+}
+
+.login-container h2 {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.login-container p {
+    margin-top: 20px;
+}
+
+.login-container a {
+    color: #777777;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.login-container a:hover {
+    color: #50a1c7;
+}
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+}
