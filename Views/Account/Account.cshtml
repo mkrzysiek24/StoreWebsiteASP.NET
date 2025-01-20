@@ -1,6 +1,4 @@
-@{
-    ViewData["Title"] = "Kokpit";
-}
+@model SneakersPlanet.Models.User
 
 <!DOCTYPE html>
 <html lang="en">
@@ -14,15 +12,15 @@
     <div class="dashboard">
         <div class="menu">
             <ul>
-                <li><a href="/Account">Kokpit</a></li>
-                <li><a href="/Account/Orders">Zamówienia</a></li>
-                <li><a href="/Account/Address">Adres</a></li>
-                <li><a href="/Account/Details">Szczegóły konta</a></li>
-                <li><a href="/Logout">Wyloguj się</a></li>
+                <li><a href="/account">Kokpit</a></li>
+                <li><a href="/account/orders">Zamówienia</a></li>
+                <li><a href="/account/adress">Adres</a></li>
+                <li><a href="/account/details">Szczegóły konta</a></li>
+                <li><a href="/logout">Wyloguj się</a></li>
             </ul>
         </div>
         <div class="content">
-            <h1>Witaj, @ViewData["FirstName"] @ViewData["LastName"]!</h1>
+            <h1>Witaj, @Model.FirstName @Model.LastName!</h1>
             <p>W ustawieniach swojego konta możesz przejrzeć swoje ostatnie zamówienia, zarządzać adresami płatności i dostawy oraz zmieniać hasło i szczegóły konta.</p>
         </div>
     </div>

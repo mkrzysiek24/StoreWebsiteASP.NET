@@ -1,0 +1,101 @@
+body {
+    font-family: sans-serif, Arial;
+    margin: 0;
+    padding: 0;
+    background-color: #50a1c7;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px;
+}
+
+nav img {
+    height: 40px;
+}
+
+nav a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px;
+    margin: 0 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    color: #50a1c7;
+}
+
+.free-shipping {
+    background-color: #50a1c7;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.right-icons {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.dashboard {
+    display: flex;
+    margin: 40px;
+}
+
+.content {
+    flex-grow: 1;
+    margin-left: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.cart-table th, .cart-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.cart-item-image img {
+    max-width: 180px; 
+    max-height: 180px; 
+    display: block; 
+}
+
+.button {
+    background-color: #007BFF; 
+    color: #fff; 
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; 
+}
+
+.button:hover {
+    background-color: #6C757D; 
+}
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+}
+
+.content h1 {
+    text-align: center;
+    margin-bottom: 40px;
+}

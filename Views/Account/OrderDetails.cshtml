@@ -1,0 +1,59 @@
+@model SneakersPlanet.Models.OrderDetailsViewModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sneakers planet</title>
+    <link rel="stylesheet" href="~/css/cart.css">
+</head>
+<body>
+    <div class="dashboard">
+        <div class="content">
+            <h1>Szczegóły zamówienia nr. @Model.OrderId</h1>
+            <table class="cart-table">
+                <thead>
+                    <tr>
+                        <th>Zdjęcie</th>
+                        <th>Produkt</th>
+                        <th>Rozmiar</th>
+                        <th>Cena</th>
+                        <th>Ilość dostępnych sztuk</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.Items)
+                    {
+                        <tr>
+                            <td class="cart-item-image">
+                                <img src="@item.ProductImage" alt="@item.ProductName">
+                            </td>
+                            <td class="cart-item-name">
+                                <p><strong>@item.ProductName</strong></p>
+                            </td>
+                            <td class="cart-item-size">
+                                <p>Rozmiar: @item.Size</p>
+                            </td>
+                            <td class="cart-item-price">
+                                <p>Cena: @item.Price PLN</p>
+                            </td>
+                            <td class="cart-item-stock">
+                                <p>Ilość: @item.Quantity szt.</p>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <div class="total">
+                <p><strong>Łączna cena:</strong> @Model.TotalValue PLN</p>
+            </div>
+            <div class="user-address">
+                <h3>Dane kupującego:</h3>
+                <p><strong>Imię i nazwisko:</strong> @Model.UserName </p>
+                <p><strong>Adres:</strong> @Model.UserAddress, @Model.UserPostal @Model.UserCity</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 
 namespace SneakersPlanet.Models
 {
+    [BsonIgnoreExtraElements]
     public class Order
     {
         [BsonId]
@@ -26,6 +27,7 @@ namespace SneakersPlanet.Models
         public DateTime OrderDate { get; set; }
     }
 
+    [BsonIgnoreExtraElements]
     public class OrderItem
     {
         [BsonElement("sneakerId")]

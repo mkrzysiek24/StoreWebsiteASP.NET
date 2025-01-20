@@ -1,0 +1,56 @@
+@model IEnumerable<Order>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sneakers planet</title>
+    <link rel="stylesheet" href="/css/admin-items.css">
+</head>
+<body>
+    <div class="dashboard">
+        <div class="menu">
+            <ul>
+                <li><a href="/Admin">Kokpit</a></li>
+                <li><a href="/Admin/Orders">Zamówienia</a></li>
+                <li><a href="/Admin/Users">Użytkownicy</a></li>
+                <li><a href="/Admin/Sneakers">Obuwie</a></li>
+                <li><a href="/Admin/Ubrania">Ubrania</a></li>
+                <li><a href="/Admin/Akcesoria">Akcesoria</a></li>
+                <li><a href="/Logout">Wyloguj się</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="header-container">
+                <h1>Zamówienia</h1>
+            </div>
+            <div class="sneakers-list">
+                @if (Model != null && Model.Any())
+                {
+                    foreach (var order in Model)
+                    {
+                        <div class="sneaker-item">
+                            <h2 class="order-id">Zamówienie nr @order.Id</h2>
+                            <p><strong>Data zamówienia:</strong> @order.OrderDate.ToString("yyyy-MM-dd")</p>
+                            <p><strong>Łączna wartość:</strong> @order.TotalValue PLN</p>
+                            
+                            <div class="button-container">
+                                <a href="/admin/orderdetails/@order.Id" class="edit-button">Szczegóły</a>
+                                
+                                <form method="post" action="/admin/orders/delete/@order.Id" onsubmit="return confirm('Czy na pewno chcesz usunąć to zamówienie?');">
+                                    <button type="submit" class="delete-button">Usuń</button>
+                                </form>
+                            </div>
+                        </div>
+                    }
+                }
+                else
+                {
+                    <p>Brak dostępnych zamówień</p>
+                }
+            </div>
+        </div>
+    </div>
+</body>
+</html>
