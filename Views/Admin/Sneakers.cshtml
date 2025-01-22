@@ -1,0 +1,69 @@
+@model CategoryItemsViewModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sneakers Planet - Admin</title>
+    <link rel="stylesheet" href="~/css/admin-items.css">
+</head>
+<body>
+    <div class="dashboard">
+        <div class="menu">
+            <ul>
+                <li><a href="/admin">Kokpit</a></li>
+                <li><a href="/admin/orders">Zamówienia</a></li>
+                <li><a href="/admin/users">Użytkownicy</a></li>
+                <li><a href="/admin/sneakers">Obuwie</a></li>
+                <li><a href="/admin/clothes">Ubrania</a></li>
+                <li><a href="/admin/accessories">Akcesoria</a></li>
+                <li><a href="/logout">Wyloguj się</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="header-container">
+                <a href="/admin/items/add/@Model.CategoryName">
+                    <img src="~/images/add-sneaker.svg" alt="Add New Sneakers" style="width: 30px; height: 30px; margin-right: 10px;">
+                </a>
+                <h1>@Model.CategoryName</h1>
+            </div>
+            <div class="sneakers-list">
+                @if (Model.Items != null && Model.Items.Any()) 
+                {
+                    foreach (var item in Model.Items)
+                    {
+                        <div class="sneaker-item">
+                            <img src="@item.ImageURL" alt="@item.Name">
+                            <h2>@item.Name</h2>
+                            <p><strong>Marka:</strong> @item.Brand</p>
+                            <p><strong>Kategoria:</strong> @item.Category</p>
+                            <p><strong>Cena:</strong> @item.Price PLN</p>
+                            <p><strong>Rozmiary:</strong>
+                                @foreach (var size in item.Sizes)
+                                {
+                                    <span style="color: @(size.Quantity == 0 ? "black" : (size.Quantity > 3 ? "green" : "red"));">
+                                        @size.Size
+                                    </span>
+                                }
+                            </p>
+                            <p><strong>Ilość dostępnych sztuk:</strong> @item.Sizes.Sum(s => s.Quantity)</p>
+                            <div class="button-container">
+                                <a href="/admin/items/edit/@item.Id" class="edit-button">Edytuj</a>
+                                <form method="post" action="/admin/items/delete/@item.Id" onsubmit="return confirm('Czy na pewno chcesz usunąć @item.Name?');">
+                                    <input type="hidden" name="CategoryName" value="@Model.CategoryName" />
+                                    <button type="submit" class="delete-button">Usuń</button>
+                                </form>
+                            </div>
+                        </div>
+                    }
+                }
+                else
+                {
+                    <p>Nie ma dostępnych produktów z kategorii: @Model.CategoryName</p>
+                }
+            </div>
+        </div>
+    </div>
+</body>
+</html>

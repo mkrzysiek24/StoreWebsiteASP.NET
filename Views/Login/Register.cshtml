@@ -1,0 +1,30 @@
+@{
+    ViewData["Title"] = "Rejestracja";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rejestracja - Sneakers Planet</title>
+    <link rel="stylesheet" href="~/css/login.css" />
+</head>
+<body>
+    <div class="login-container">
+        <h2>Rejestracja</h2>
+        <form asp-action="Register" asp-controller="Login" method="post">
+            <input type="text" name="FirstName" placeholder="Imię" required />
+            <input type="text" name="LastName" placeholder="Nazwisko" required />
+            <input type="password" name="Password" placeholder="Hasło" required />
+            <input type="email" name="Email" placeholder="E-mail" required />
+            <button type="submit">Zarejestruj</button>
+        </form>
+        @if (ViewData["ErrorMessage"] != null)
+        {
+            <p class="error-message">@ViewData["ErrorMessage"]</p>
+        }
+        <p>Masz już konto? <a href="/Login">Zaloguj się</a></p>
+    </div>
+</body>
+</html>

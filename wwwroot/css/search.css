@@ -1,0 +1,142 @@
+body {
+    font-family: sans-serif, Arial;
+    margin: 0;
+    padding: 0;
+    background-color: #50a1c7;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px;
+}
+
+nav img {
+    height: 40px;
+}
+
+nav a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px;
+    margin: 0 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    color: #50a1c7;
+}
+
+.free-shipping {
+    background-color: #50a1c7;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.right-icons {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.dashboard {
+    display: flex;
+    margin: 40px;
+}
+
+.content {
+    flex-grow: 1;
+    margin-left: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.search-container {
+    display: flex;
+}
+
+#searchInput {
+    flex-grow: 1;
+    padding: 15px; 
+    border: 1px solid #ddd;
+    border-radius: 5px 0 0 5px;
+}
+
+.button {
+    padding: 15px 20px; 
+    width: 150px;
+    border: none;
+    background-color: #50a1c7;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s; 
+    height: 50px; 
+}
+
+.button:hover {
+    background-color: #6C757D; 
+}
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+}
+
+.content h1 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.product-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 20px;
+}
+
+.sneaker-item {
+    margin: 10px;
+    text-align: center;
+    border: 1px solid #e1e1e1; 
+    padding: 10px; 
+    border-radius: 10px;
+    height: 340px;
+    width: 370px;
+}
+
+.sneaker-image {
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.sneaker-info {
+    max-width: 400px;
+    margin-top: 10px;
+}
+
+.sneaker-info a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.sneaker-info a:hover {
+    color: #50a1c7;
+}
+
+.product-details a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.product-details a:hover {
+    color: #50a1c7;
+}

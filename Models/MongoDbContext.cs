@@ -12,6 +12,7 @@ namespace SneakersPlanet.Models
         }
 
         public IMongoCollection<Item> Items => _database.GetCollection<Item>("items");
+        public IMongoCollection<User> Users => _database.GetCollection<User>("users");
+        public IMongoCollection<Order> Orders => _database.GetCollection<Order>("orders");
     }
 }
-

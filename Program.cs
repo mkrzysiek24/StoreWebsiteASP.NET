@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System.Text.Json;
 using MongoDB.Driver;
 using SneakersPlanet.Models;
 
@@ -19,6 +20,14 @@ builder.Services.AddSingleton<MongoDbContext>(serviceProvider =>
     return new MongoDbContext(mongoClient, databaseName);
 });
 
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30);
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
+
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
@@ -34,6 +43,8 @@ else
 }
 
 app.UseStaticFiles();
+app.UseSession();
+app.UseRouting();
 
 app.MapControllerRoute(
     name: "default",

@@ -1,0 +1,149 @@
+body {
+    font-family: sans-serif, Arial;
+    margin: 0;
+    padding: 0;
+    background-color: #50a1c7;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px;
+}
+
+nav img {
+    height: 40px;
+}
+
+nav a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px;
+    margin: 0 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    color: #50a1c7;
+}
+
+.free-shipping {
+    background-color: #50a1c7;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.right-icons {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.dashboard {
+    display: flex;
+    margin: 40px;
+}
+
+.menu {
+    background-color: white;
+    width: 200px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu li {
+    margin-bottom: 10px;
+}
+
+.menu a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.menu a:hover {
+    color: #50a1c7;
+}
+
+.content {
+    flex-grow: 1;
+    margin-left: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.content h1 {
+    text-align: center;
+}
+
+.sneakers-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.sneaker-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: 300px;
+    text-align: center;
+}
+
+.sneaker-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.header-container h1 {
+    margin: 0 auto; 
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.edit-button,
+.delete-button {
+    display: inline-block;
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #50a1c7; 
+    color: white;
+    border: 1px solid #50a1c7;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.edit-button:hover,
+.delete-button:hover {
+    background-color: #4087b4; 
+}
+
+.order-id {
+    font-size: 18px; 
+    margin-bottom: 5px;
+}

@@ -1,0 +1,47 @@
+@model List<User>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sneakers Planet - Użytkownicy</title>
+    <link rel="stylesheet" href="/css/users.css">
+</head>
+<body>
+    <div class="dashboard">
+        <div class="menu">
+            <ul>
+                <li><a href="/admin">Kokpit</a></li>
+                <li><a href="/admin/orders">Zamówienia</a></li>
+                <li><a href="/admin/users">Użytkownicy</a></li>
+                <li><a href="/admin/sneakers">Obuwie</a></li>
+                <li><a href="/admin/clothes">Ubrania</a></li>
+                <li><a href="/admin/accessories">Akcesoria</a></li>
+                <li><a href="/logout">Wyloguj się</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <h1>Użytkownicy</h1>
+            <div class="user-list">
+                @foreach (var user in Model)
+                {
+                    <div class="user-item">
+                        <p><strong>Imię:</strong> @user.FirstName</p>
+                        <p><strong>Nazwisko:</strong> @user.LastName</p>
+                        <p><strong>Email:</strong> @user.Email</p>
+                        <p><strong>Hasło:</strong> **********</p>
+                        <p><strong>Typ:</strong> @user.AccountType</p>
+                        <form asp-action="DeleteUser" method="post" asp-route-id="@user.Id">
+                            <button type="submit" onclick="return confirm('Czy na pewno chcesz usunąć konto?')">Usuń konto</button>
+                        </form>
+                        <form asp-action="ChangePassword" method="get" asp-route-id="@user.Id">
+                            <button type="submit">Zmień hasło</button>
+                        </form>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</body>
+</html>

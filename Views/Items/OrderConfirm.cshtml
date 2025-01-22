@@ -1,0 +1,48 @@
+@model dynamic
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Potwierdzenie zamówienia</title>
+    <link rel="stylesheet" href="~/css/cart.css">
+</head>
+<body>
+    <div class="dashboard">
+        <div class="content">
+            <h1>Twoje zamówienie zostało potwierdzone!</h1>
+            <table class="cart-table">
+                <thead>
+                    <tr>
+                        <th>Zdjęcie</th>
+                        <th>Produkt</th>
+                        <th>Rozmiar</th>
+                        <th>Cena</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.Cart)
+                    {
+                        <tr>
+                            <td class="cart-item-image"><img src="@item.ImageURL" alt="@item.Name"></td>
+                            <td class="cart-item-name">@item.Name</td>
+                            <td class="cart-item-size">@item.Size</td>
+                            <td class="cart-item-price">@item.Price PLN</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <div class="total">
+                <p><strong>Łączna cena:</strong> @Model.TotalValue PLN</p>
+            </div>
+            <div class="user-address">
+                <h3>Twój adres</h3>
+                <p><strong>Imię i nazwisko:</strong> @Model.User.FirstName @Model.User.LastName</p>
+                <p><strong>Adres:</strong> @Model.User.Address, @Model.User.PostalCode @Model.User.City</p>
+            </div>
+            <p>Dziękujemy za zakupy w Sneakers Planet!</p>
+        </div>
+    </div>
+</body>
+</html>
