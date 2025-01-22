@@ -20,8 +20,8 @@
                     <p><strong>Cena:</strong> @Model.Price PLN</p>
                     <p><strong>Płeć:</strong> @Model.Gender</p>
 
-                    <form action="/cart/add" method="post">
-                        <input type="hidden" name="itemId" value="@Model.Id">
+                    <form action="/item/add-to-cart" method="post">
+                        <input type="hidden" name="sneakerId" value="@Model.Id">
                         <input type="hidden" name="slug" value="@Model.Slug">
 
                         <label for="sizes"><strong>Rozmiar:</strong></label>

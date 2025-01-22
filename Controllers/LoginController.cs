@@ -41,7 +41,7 @@ public class LoginController : Controller
         return View();
     }
 
-    [HttpPost]
+    [HttpPost("register")]
     public async Task<IActionResult> Register(string firstName, string lastName, string email, string password)
     {
         var existingUser = await _dbContext.Users.Find(u => u.Email == email).FirstOrDefaultAsync();

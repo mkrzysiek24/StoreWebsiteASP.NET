@@ -35,3 +35,5 @@ namespace SneakersPlanet.Models
         public string AccountType { get; set; }
     }
 }
+
+

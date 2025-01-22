@@ -67,6 +67,11 @@ public class AccountController : Controller
 
             if (order != null)
             {
+                
+                if (order.UserId != user.Id)
+                {
+                    return Unauthorized();
+                }
                 var orderUser = await _dbContext.Users.Find(u => u.Id == order.UserId).FirstOrDefaultAsync();
 
                 var itemIds = order.Items.Select(i => i.SneakerId).ToList();
@@ -156,6 +161,10 @@ public class AccountController : Controller
 
             if (order != null)
             {
+                if (order.UserId != user.Id)
+                {
+                    return Unauthorized();
+                }
                 await _dbContext.Orders.DeleteOneAsync(o => o.Id == orderId);
                 return RedirectToAction("Orders");
             }
